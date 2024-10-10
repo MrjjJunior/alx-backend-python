@@ -2,6 +2,7 @@
 """ Given function """
 from typing import Tuple
 
+
 def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
     """ mypy check """
     zoomed_in: Tuple = [
