@@ -1,4 +1,4 @@
-#!/usr/bin/python3 
+#!/usr/bin/env python3 
 """ Function that adds 2 number"""
 
 
