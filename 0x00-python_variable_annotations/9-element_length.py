@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" Annotation """
+""" Annotation placement """
 from typing import List, Tuple, Sequence, Iterable
 
 
