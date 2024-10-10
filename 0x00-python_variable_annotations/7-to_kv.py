@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env python3
 from typing import Union, Tuple
 """ Return a Tuple """
 

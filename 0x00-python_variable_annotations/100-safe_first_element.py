@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """ Unknown elements """
 from typing import Sequence, Any, Union
 
