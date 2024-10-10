@@ -3,4 +3,5 @@
 
 
 def floor(n: float) -> int:
+    """ Rounds of the number """
     return int(n)
