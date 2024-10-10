@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-""" """
+""" Given function """
 from typing import Tuple
 
 def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
+    """ mypy check """
     zoomed_in: Tuple = [
         item for item in lst
         for i in range(factor)
