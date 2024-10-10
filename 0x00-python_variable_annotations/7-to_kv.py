@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from typing import Union, Tuple
-""" Return a Tuple """
+""" a Tuple """
 
 
 def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
