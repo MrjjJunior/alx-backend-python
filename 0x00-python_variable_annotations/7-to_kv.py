@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from typing import Union, Tuple
-""" a Tuple """
+""" Tuple Returs a squared number """
 
 
 def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
