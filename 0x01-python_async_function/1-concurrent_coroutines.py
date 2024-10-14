@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-""" A Python module """
-import asyncio, importlib
+""" Function that imports code from prev file """
+import asyncio
+import importlib
 from typing import List
 
 basic_async_syntax = importlib.import_module('0-basic_async_syntax')
@@ -8,14 +9,8 @@ wait_random = basic_async_syntax.wait_random
 
 
 async def wait_n(n: int, max_delay: int) -> list[float]:
-    """sumary_line
+    """  Function that waits n times with random delay """
 
-    Keyword arguments:
-    n -- description
-    max_delay -- description
-    Return: return_description
-    """
-    
     wait_times = await asyncio.gather(
         *tuple(map(lambda _:
         wait_random(max_delay), range(n)))

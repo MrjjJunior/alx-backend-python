@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """ Basic async syntax with await """
-import asyncio, random
+import asyncio
+import random
 
 
 async def wait_random(max_delay):
