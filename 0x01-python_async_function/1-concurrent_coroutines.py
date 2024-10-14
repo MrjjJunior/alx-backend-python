@@ -4,15 +4,17 @@ import asyncio
 import importlib
 from typing import List
 
-basic_async_syntax = importlib.import_module('0-basic_async_syntax')
-wait_random = basic_async_syntax.wait_random
+wait_random = __import__("0-basic_async_syntax.py").wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> list[float]:
-    """ Function that waits n times with random delay """
+async def wait_n(n: int, max_delay: int) -> list:
+    """ Function that waits n times and returns a list of delays """
 
-    wait_times = await asyncio.gather(
-        *tuple(map(lambda _:
-        wait_random(max_delay), range(n)))
-    )
-    return sorted(wait_times)
+    tasks = [wait_random(max_delay) for _ in range(n)]
+    
+    delays = []
+    for task in asyncio.as_completed(tasks):
+        delay = await task
+        delays.append(delay)
+    
+    return delays
