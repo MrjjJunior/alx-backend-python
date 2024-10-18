@@ -10,7 +10,7 @@ async def wait_random(max_delay: int) -> float:
     await asyncio.sleep(delay)
     return delay
 
-async def wait_n(n: int, max_delay: int) -> list:
+async def wait_n(n: int, max_delay: int) -> list[float]:
     """ Create a list of tasks using wait_random """
     tasks = [wait_random(max_delay) for _ in range(n)]
     
