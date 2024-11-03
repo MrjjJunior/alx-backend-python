@@ -5,6 +5,9 @@ import utils
 import parameterized
 from unittest.mock import patch, Mock
 
+#utils imports
+access_nested_map = utils.access_nested_map
+
 class TestAcessNestedMap(unittest.TestCase):
     '''
     '''
@@ -13,10 +16,10 @@ class TestAcessNestedMap(unittest.TestCase):
         ({"a": {"b": 2}}, ("a",), {"b": 2}),
         ({"a": {"b": 2}}, ("a", "b"), 2)
     ])
-
+        
     def test_access_nested_map(self, nested_map, path, expected):
         ''''''
-        self.assertEqual(utils.access_nested_map(nested_map, path), expected)
+        self.assertEqual(access_nested_map(nested_map, path), expected)
     
     @parameterized.parameterized.expand([
         ({}, ("a",)),
