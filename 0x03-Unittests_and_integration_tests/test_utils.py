@@ -2,8 +2,9 @@
 """Utils Test"""
 import unittest
 import utils
-import parameterized
+from parameterized import parameterized
 from unittest.mock import patch, Mock
+from typing import Dict, Tuple, Any
 
 #utils imports
 access_nested_map = utils.access_nested_map
@@ -11,13 +12,13 @@ access_nested_map = utils.access_nested_map
 class TestAcessNestedMap(unittest.TestCase):
     '''
     '''
-    @parameterized.parameterized.expand([
+    @parameterized.expand([
         ({"a": 1}, ("a",), 1), # nested_map , path,  expected
         ({"a": {"b": 2}}, ("a",), {"b": 2}),
         ({"a": {"b": 2}}, ("a", "b"), 2)
     ])
         
-    def test_access_nested_map(self, nested_map, path, expected):
+    def test_access_nested_map(self, nested_map: Dict[str, Any], path: Tuple[str], expected) -> None:
         ''''''
         self.assertEqual(access_nested_map(nested_map, path), expected)
     
@@ -80,3 +81,6 @@ class TestMemoize(unittest.TestCase):
 
             mock_method.assert_called_once()
             ''''''
+
+if __name__ == "__main__":
+    unittest.main()
